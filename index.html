@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he" style="background-color: rgb(217, 40, 249);">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>calc</title>
+        <script>
+            function numpressd(iNumber){
+
+                var scalculator = document.getElementById("calculator_value");
+
+               if(scalculator.value === '0'){
+                   scalculator.value = '';
+                 }
+                scalculator.value = scalculator.value + iNumber;
+            }
+            
+            function clearall(){
+                scalculator = document.getElementById("calculator_value").value;
+                calculator_value.value = '0';
+                }
+
+            function calc() {
+                var scalculator = document.getElementById("calculator_value");
+                scalculator.value = eval(scalculator.value);
+            }
+               
+
+        </script>
+    </head>
+    <bady background-color: aqua; dir="ltr">
+        <center>
+            <h1><label for="calculator_value">מחשבון</label></h1>
+            <input type="text" id="calculator_value" value="0" style="
+    background-color: aqua;
+    color: chocolate;
+">
+            <table border="10px" cellpadding"100px" 
+            style="background-color: red;
+">
+                <tr>
+                    <td><button onclick="numpressd('1')">1</button></td>
+                    <td><button onclick="numpressd('2')">2</button></td>
+                    <td><button onclick="numpressd('3')">3</button></td>  
+                    <td><button onclick="numpressd('+')">+</button></td>  
+                </tr>
+                <tr>
+                    <td><button onclick="numpressd('4')">4</button></td>
+                    <td><button onclick="numpressd('5')">5</button></td>
+                    <td><button onclick="numpressd('6')">6</button></td>  
+                    <td><button onclick="numpressd('-')">-</button></td>  
+                </tr>
+                <tr>
+                    <td><button onclick="numpressd('7')">7</button></td>
+                    <td><button onclick="numpressd('8')">8</button></td>
+                    <td><button onclick="numpressd('9')">9</button></td>
+                    <td><button onclick="numpressd('0')">0</button></td>
+                    </tr>
+                <tr>
+                    <td><button onclick="clearall()">C</button></td>  
+                    <td><button onclick="numpressd('/')">/</button></td>
+                    <td><button onclick="numpressd('*')">*</button></td>
+                    <td><button onclick="calc()">=</button></td>             
+                </tr>
+            </table>
+        </center>
+    </bady>
+</html>
